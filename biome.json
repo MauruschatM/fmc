@@ -8,7 +8,6 @@
   "files": {
     "ignoreUnknown": false,
     "includes": [
-      "**",
       "!**/.next",
       "!**/dist",
       "!**/.turbo",
@@ -79,5 +78,30 @@
       "tailwindDirectives": true
     }
   },
-  "extends": ["ultracite/biome/core", "ultracite/biome/react"]
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "overrides": [
+    {
+      "includes": ["packages/backend/convex/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off"
+          },
+          "suspicious": {
+            "useAwait": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [".agents/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off"
+          }
+        }
+      }
+    }
+  ]
 }
