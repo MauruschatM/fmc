@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "scheme": "fmc",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "fmc",
+    "slug": "fmc",
+    "plugins": ["expo-font"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

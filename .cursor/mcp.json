@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "convex": {
+      "command": "npx",
+      "args": ["-y", "convex@latest", "mcp", "start"]
+    },
+    "better-auth": {
+      "url": "https://mcp.inkeep.com/better-auth/mcp"
+    },
+    "expo-mcp": {
+      "url": "https://mcp.expo.dev/mcp"
+    }
+  }
+}
