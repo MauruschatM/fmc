@@ -8,6 +8,7 @@ import { query } from "./_generated/server";
 import authConfig from "./auth.config";
 
 const nativeAppUrl = process.env.NATIVE_APP_URL || "mybettertapp://";
+const webAppUrl = process.env.WEB_APP_URL;
 
 export const authComponent = createClient<DataModel>(components.betterAuth);
 
@@ -15,8 +16,14 @@ function createAuth(ctx: GenericCtx<DataModel>) {
 	return betterAuth({
 		trustedOrigins: [
 			nativeAppUrl,
+			...(webAppUrl ? [webAppUrl] : []),
 			...(process.env.NODE_ENV === "development"
-				? ["exp://", "exp://**", "exp://192.168.*.*:*/**"]
+				? [
+						"exp://",
+						"exp://**",
+						"exp://192.168.*.*:*/**",
+						"http://localhost:8081",
+					]
 				: []),
 		],
 		database: authComponent.adapter(ctx),
