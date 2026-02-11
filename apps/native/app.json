@@ -4,7 +4,9 @@
     "userInterfaceStyle": "automatic",
     "orientation": "default",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
     },
     "name": "fmc",
     "slug": "fmc",

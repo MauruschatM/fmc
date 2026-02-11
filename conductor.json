@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "setup": "bun install && bun run ruler:apply",
+    "run": "bun dev"
+  }
+}

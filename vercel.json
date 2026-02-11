@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd apps/native && npx expo export --platform web",
+  "outputDirectory": "apps/native/dist",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
