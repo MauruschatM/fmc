@@ -9,9 +9,15 @@
  */
 
 import type * as auth from "../auth.js";
+import type * as channels from "../channels.js";
+import type * as conversations from "../conversations.js";
 import type * as healthCheck from "../healthCheck.js";
 import type * as http from "../http.js";
+import type * as messages from "../messages.js";
+import type * as onboarding from "../onboarding.js";
 import type * as privateData from "../privateData.js";
+import type * as seed from "../seed.js";
+import type * as userProfiles from "../userProfiles.js";
 
 import type {
   ApiFromModules,
@@ -21,9 +27,15 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
+  channels: typeof channels;
+  conversations: typeof conversations;
   healthCheck: typeof healthCheck;
   http: typeof http;
+  messages: typeof messages;
+  onboarding: typeof onboarding;
   privateData: typeof privateData;
+  seed: typeof seed;
+  userProfiles: typeof userProfiles;
 }>;
 
 /**
