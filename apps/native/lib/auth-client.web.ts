@@ -4,5 +4,8 @@ import { createAuthClient } from "better-auth/react";
 
 export const authClient = createAuthClient({
 	baseURL: env.EXPO_PUBLIC_CONVEX_SITE_URL,
+	fetchOptions: {
+		credentials: "include",
+	},
 	plugins: [convexClient()],
 });

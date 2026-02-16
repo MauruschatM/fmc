@@ -31,6 +31,12 @@ function createAuth(ctx: GenericCtx<DataModel>) {
 			enabled: true,
 			requireEmailVerification: false,
 		},
+		advanced: {
+			defaultCookieAttributes: {
+				sameSite: "none",
+				secure: true,
+			},
+		},
 		plugins: [
 			expo(),
 			convex({
